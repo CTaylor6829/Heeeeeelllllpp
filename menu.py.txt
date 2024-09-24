@@ -63,14 +63,14 @@ def add():
 def delete_item():
     item= flask.request.form['dish_item']
     targeted_item = {'Name': item}
-   # delete('items', (where(db_from('items'),'Name',item)),0)
-   # delete('items', 0)    
+    #print(where(db_from('items'),'Name',item))
+    #delete('items', where(db_from('items'),'Name',item))
+    delete('items','Name')
     return flask.render_template('delete.html',
                                 deleted_item=targeted_item,
                                 sections=get_sections(),
                                 dishnames=get_dish_names()
                                 )
-
     
 #-----------------
 # Do NOT Write Code Below This Line
