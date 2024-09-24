@@ -65,7 +65,7 @@ def delete_item():
     targeted_item = {'Name': item}
     #print(where(db_from('items'),'Name',item))
     #delete('items', where(db_from('items'),'Name',item))
-    delete('items','Name')
+    #delete('items','Name')
     return flask.render_template('delete.html',
                                 deleted_item=targeted_item,
                                 sections=get_sections(),
